@@ -9,14 +9,14 @@
                     <div class="form-group">
                         <label for="inputJudulArtikel" class="col-sm-2 control-label">Judul Artikel</label>
                         <div class="col-sm-10">
-                            <input type="text" class="form-control" id="inputJudulArtikel" name="judul_artikel" placeholder="Judul Artikel">
+                            <input type="text" class="form-control" id="inputJudulArtikel" name="judul_artikel" placeholder="Judul Artikel" required>
                         </div>
                     </div>
 
                     <div class="form-group">
                         <label for="inputKategoriArtikel" class="col-sm-2 control-label">Kategori Artikel</label>
                         <div class="col-sm-10">
-                        <select class="form-control" id="inputKategoriArtikel" name="id_kategori_artikel">
+                        <select class="form-control" id="inputKategoriArtikel" name="id_kategori_artikel" required>
                             <option></option>
                             <?php
                                 $r = $con->query("SELECT * FROM kategori_artikel");
@@ -33,7 +33,7 @@
                     <div class="form-group">
                         <label for="ckeditor_full" class="col-sm-2 control-label">Artikel</label>
                         <div class="col-sm-10">
-                            <textarea id="ckeditor_full" name="artikel"></textarea>
+                            <textarea id="ckeditor_full" name="artikel" required></textarea>
                         </div>
                     </div>
                     

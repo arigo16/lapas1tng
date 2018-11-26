@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Papers - Free Bootstrap 4 Template by Colorlib</title>
+    <title>ARTIKEL - LAPAS KELAS 1 TANGERANG</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     
@@ -29,18 +29,17 @@
     
     <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar" data-aos="fade-down" data-aos-delay="500">
       <div class="container">
-        <a class="navbar-brand" href="index.html">SMK 01 Mandiri</a>
+        <a class="navbar-brand" href="index.php">LAPAS KELAS 1 TANGERANG</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="oi oi-menu"></span> Menu
         </button>
 
         <div class="collapse navbar-collapse" id="ftco-nav">
-        <ul class="navbar-nav ml-auto">
-        <li class="nav-item active"><a href="index.php" class="nav-link">Home</a></li>
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active"><a href="index.php" class="nav-link">Home</a></li>
             <li class="nav-item"><a href="article.php" class="nav-link">Artikel</a></li>
             <li class="nav-item"><a href="#" class="nav-link">Tentang Kami</a></li>
             <li class="nav-item"><a href="#" class="nav-link">Hubungi</a></li>
-            <li class="nav-item"><a href="users/login.php" class="nav-link">Masuk</a></li>
           </ul>
         </div>
       </div>
@@ -162,9 +161,7 @@
       <div class="row">
         <div class="col-md-12 text-center">
 
-          <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | SMK 01 Mandiri Panongan
-<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+          <p>Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | LAPAS KELAS 1 TANGERANG</p>
         </div>
       </div>
     </div>

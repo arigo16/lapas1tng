@@ -5,31 +5,37 @@
                 <div class="panel-title">Tambah File</div>
             </div>
             <div class="panel-body">
-                <form class="form-horizontal" role="form">
+                <form action="controller/act-file-add.php" method="POST" enctype="multipart/form-data" class="form-horizontal" role="form">
                     <div class="form-group">
                         <label for="inputJudulFile" class="col-sm-2 control-label">Judul File</label>
                         <div class="col-sm-10">
-                            <input type="text" class="form-control" id="inputJudulFile" placeholder="Judul File">
+                            <input type="text" class="form-control" id="inputJudulFile" name="judul_file" placeholder="Judul File" required>
                         </div>
                     </div>
 
                     <div class="form-group">
                         <label for="inputTipeFile" class="col-sm-2 control-label">Tipe File</label>
                         <div class="col-sm-10">
-                        <select class="form-control" id="inputTipeFile">
-                            <option value="Document">Document .docx</option>
-                            <option value="Excel">Excel .xlsx</option>
-                            <option value="Powerpoint">Powerpoint .pptx</option>
+                        <select class="form-control" id="inputTipeFile" name="id_tipe_file" required>
+                            <option></option>
+                            <?php
+                                $r = $con->query("SELECT * FROM tipe_file");
+                                foreach ($r as $rr) {
+                            ?>
+                                <option value="<?php echo $rr['id_tipe_file'];?>"><?php echo $rr['tipe_file'];?></option>
+                            <?php
+                                }
+                            ?>
                         </select> 
                         </div>
                     </div>
 
                     <div class="form-group">
-                        <label for="inputFile" class="col-sm-2 control-label">Artikel</label>
+                        <label for="inputFile" class="col-sm-2 control-label">File</label>
                         <div class="col-sm-10">
-                            <input type="file" class="btn btn-default" id="inputFile">
+                            <input type="file" class="btn btn-default" name="files" id="inputFile" required>
                             <p class="help-block">
-                                Ukuran jangan melebihi 5 Mb.
+                                Ukuran jangan melebihi 10 Mb.
                             </p>
                         </div>
                     </div>
@@ -37,7 +43,7 @@
                     <div class="form-group">
                         <div class="col-sm-offset-2 col-sm-10">
                             <button type="submit" class="btn btn-primary">Simpan</button>
-                            <a href="index.php?page=file" class="btn btn-danger">Batal</a>
+                            <a href="index.php?page=file" class="btn btn-danger">Kembali</a>
                         </div>
                     </div>
                 </form>
