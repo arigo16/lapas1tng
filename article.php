@@ -38,7 +38,8 @@
           <ul class="navbar-nav ml-auto">
             <li class="nav-item active"><a href="index.php" class="nav-link">Home</a></li>
             <li class="nav-item"><a href="article.php" class="nav-link">Artikel</a></li>
-            <li class="nav-item"><a href="#" class="nav-link">Tentang Kami</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">Download File</a></li>
+            <li class="nav-item"><a href="pendaftaran" class="nav-link">Pendaftaran Kunjungan</a></li>
             <li class="nav-item"><a href="#" class="nav-link">Hubungi</a></li>
           </ul>
         </div>
