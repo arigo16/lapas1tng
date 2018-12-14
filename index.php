@@ -40,7 +40,7 @@
             <li class="nav-item"><a href="article.php" class="nav-link">Artikel</a></li>
             <li class="nav-item"><a href="#" class="nav-link">Download File</a></li>
             <li class="nav-item"><a href="pendaftaran" class="nav-link">Pendaftaran Kunjungan</a></li>
-            <li class="nav-item"><a href="#" class="nav-link">Hubungi</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">Tentang Kami</a></li>
           </ul>
         </div>
       </div>
@@ -62,7 +62,15 @@
       <div class="container">
         <div class="row">
           <div class="col-md-12  mb-5" data-aos="fade-up">
-            <h1 class="ftco-heading heading-thin mb-5">Menjadi lembaga yang akuntabel, transparan dan profesional dengan didukung oleh petugas yang memiliki kompetensi tinggi yang mampu mewujudkan tertib pemasyarakatan. </h1>
+            <h2 class="ftco-heading heading-thin mb-5"><strong>Visi</strong></h2>
+            <h4 class="ftco-heading heading-thin mb-5">Menjadi lembaga yang akuntabel, transparan dan profesional dengan didukung oleh petugas yang memiliki kompetensi tinggi yang mampu mewujudkan tertib pemasyarakatan.</h4>
+            <h2 class="ftco-heading heading-thin mb-5"><strong>Misi</strong></h2>
+            <ol>
+              <li>Mewujudkan tertib pelaksanaan tugas pokok dan fungsi pemasyarakatan secara konsisten dengan mengedepankan terhadap hokum dan hak asasi manusia</li>
+              <li>Membangun kelembagaan yang professional dengan berlandaskan pada akuntabilitas dan transparansi dalam pelaksanaan tugas pokok dan fungsi pemasyarakatan.</li>
+              <li>Mengembangkan kompetensi dan potensi sumber daya petugas secara konsisten dan berkesinambungan.</li>
+              <li>Mengembangkan kerjasama dengan mengoptimalkan stakeholder.</li>
+            </ol> 
           </div>
         </div>
       </div>
@@ -121,11 +129,18 @@
   
     <footer class="ftco-footer ftco-bg-dark ftco-section">
       <div class="container">
-        
         <div class="row">
-          <div class="col-md-12 text-center">
-
+          <div class="col-md-8 text-center">
             <p>Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | LAPAS KELAS 1 TANGERANG</p>
+          </div>
+          <div class="col-md-4">
+            <div class="ftco-footer-widget mb-4">
+              <ul class="ftco-footer-social list-unstyled float-md-right float-lft">
+                <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
+                <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
+                <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
