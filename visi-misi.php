@@ -33,20 +33,18 @@
 
     <section class="ftco-cover" style="background-image: url(assets/images/bg_1.jpg);" id="section-home" data-aos="fade"  data-stellar-background-ratio="0.5">
       <div class="container">
-        <div class="row align-items-center ftco-vh-100">
+        <div class="row align-items-center ftco-vh-75">
           <div class="col-md-7">
-            <h1 class="ftco-heading mb-3" data-aos="fade-up" data-aos-delay="500">LAPAS KELAS 1 TANGERANG</h1>
-            <h2 class="h5 ftco-subheading mb-5" data-aos="fade-up"  data-aos-delay="600">Jl. Veteran No. 2, RT. 04 / RW. 04, Babakan, Kec. Tangerang, Kota Tangerang, Banten 15118.</h2>
-            <p data-aos="fade-up"  data-aos-delay="700"><a href="https://www.google.co.id/maps/place/SMKS+Mandiri/@-6.2860474,106.5467925,15z/data=!4m5!3m4!1s0x0:0x1c19f6c5bcd00c4e!8m2!3d-6.2860474!4d106.5467925" class="btn btn-outline-white px-4 py-3" data-toggle="modal" data-target="#reservationModal">Temukan Kami</a></p>
+            <h1 class="ftco-heading mb-3" data-aos="fade-up" data-aos-delay="500">Visi dan Misi</h1>
+            <h2 class="h5 ftco-subheading mb-5" data-aos="fade-up"  data-aos-delay="600"><i>"Penjelasan terkait Visi dan Misi dari Lapas Kelas 1 Tangerang"</i></h2>    
           </div>
         </div>
       </div>
     </section>
     
-    <section class="ftco-section" id="section-about">
+    <section class="ftco-section">
       <div class="container">
-        <div class="row">
-          <div class="col-md-12  mb-5" data-aos="fade-up">
+          <div class="col-md-12" data-aos="fade-up">
             <h2 class="ftco-heading heading-thin mb-5"><strong>Visi</strong></h2>
             <h4 class="ftco-heading heading-thin mb-5">Menjadi lembaga yang akuntabel, transparan dan profesional dengan didukung oleh petugas yang memiliki kompetensi tinggi yang mampu mewujudkan tertib pemasyarakatan.</h4>
             <h2 class="ftco-heading heading-thin mb-5"><strong>Misi</strong></h2>
@@ -57,56 +55,8 @@
               <li>Mengembangkan kerjasama dengan mengoptimalkan stakeholder.</li>
             </ol> 
           </div>
-        </div>
       </div>
     </section>
-
-    <div class="ftco-section bg-light">
-      <div class="container">
-        <div class="row justify-content-center mb-5 pb-5">
-          <div class="col-md-7 text-center"  data-aos="fade-up">
-            <h2>Artikel Terbaru</h2>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="col-md-6 col-lg-4" data-aos="fade-up">
-            <a href="blog-single" class="block-5" style="background-color: grey;">
-              <div class="text">
-                <h3 class="heading">Lapas Pemuda Tangerang Terbaik ke-3 Se-Banten dalam Penyerapan Anggaran 2018</h3>
-                <div class="post-meta">
-                  <span>Humas</span>
-                  <span>Desember 20, 2018</span>
-                </div>
-              </div>
-            </a>
-          </div>
-          <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
-            <a href="blog-single" class="block-5" style="background-color: grey;">
-              <div class="text">
-                <h3 class="heading">Akreditasi Paket B di Lapas Pemuda Tangerang</h3>
-                <div class="post-meta">
-                  <span>Humas</span>
-                  <span>Desember 20, 2018</span>
-                </div>
-              </div>
-            </a>
-          </div>
-          <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
-            <a href="blog-single" class="block-5" style="background-color: grey;">
-              <div class="text">
-                <h3 class="heading">Direktur Jenderal Pemasyarakatan Resmikan Barbershop JAPE Style di Lapas Pemuda Tangerang</h3>
-                <div class="post-meta">
-                  <span>Humas</span>
-                  <span>Desember 20, 2018</span>
-                </div>
-              </div>
-            </a>
-          </div>
-        </div>
-
-      </div>
-    </div>
 
     <?php
       include 'include/footer.php';

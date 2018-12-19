@@ -35,8 +35,8 @@
       <div class="container">
         <div class="row align-items-center ftco-vh-75">
           <div class="col-md-7">
-            <h1 class="ftco-heading mb-3" data-aos="fade-up" data-aos-delay="500">Artikel</h1>
-            <h2 class="h5 ftco-subheading mb-5" data-aos="fade-up"  data-aos-delay="600"><i>"Semakin banyak kamu membaca, semakin banyak hal yang akan kamu ketahui"</i></h2>    
+            <h1 class="ftco-heading mb-3" data-aos="fade-up" data-aos-delay="500">Pengumuman</h1>
+            <h2 class="h5 ftco-subheading mb-5" data-aos="fade-up"  data-aos-delay="600"><i>"Pengumuman terkait Lapas Kelas 1 Tangerang"</i></h2>    
           </div>
         </div>
       </div>
@@ -47,9 +47,9 @@
       <div class="row">
         
           <div class="col-md-6 col-lg-4" data-aos="fade-up">
-            <a href="blog-single" class="block-5" style="background-color: grey;">
+            <a href="blog-single" class="block-5" style="background-color: navy;">
               <div class="text">
-                <h3 class="heading">Lapas Pemuda Tangerang Terbaik ke-3 Se-Banten dalam Penyerapan Anggaran 2018</h3>
+                <h3 class="heading">Liburan Tahun Baru</h3>
                 <div class="post-meta">
                   <span>Humas</span>
                   <span>Desember 20, 2018</span>
@@ -59,9 +59,9 @@
           </div>
 
           <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
-            <a href="blog-single" class="block-5" style="background-color: grey;">
+            <a href="blog-single" class="block-5" style="background-color: navy;">
               <div class="text">
-                <h3 class="heading">Akreditasi Paket B di Lapas Pemuda Tangerang</h3>
+                <h3 class="heading">Perayaan Natal Pada Lapas Kelas 1 Tangerang</h3>
                 <div class="post-meta">
                   <span>Humas</span>
                   <span>Desember 20, 2018</span>
@@ -71,9 +71,9 @@
           </div>
 
           <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
-            <a href="blog-single" class="block-5" style="background-color: grey;">
+            <a href="blog-single" class="block-5" style="background-color: navy;">
               <div class="text">
-                <h3 class="heading">Direktur Jenderal Pemasyarakatan Resmikan Barbershop JAPE Style di Lapas Pemuda Tangerang</h3>
+                <h3 class="heading">Perayaan Hari Idul Fitri</h3>
                 <div class="post-meta">
                   <span>Humas</span>
                   <span>Desember 20, 2018</span>
@@ -83,9 +83,9 @@
           </div>
 
           <div class="col-md-6 col-lg-4" data-aos="fade-up">
-            <a href="blog-single" class="block-5" style="background-color: grey;">
+            <a href="blog-single" class="block-5" style="background-color: navy;">
               <div class="text">
-                <h3 class="heading">Rayakan Hari Pahlawan, Lapas Pemuda Tangerang Gelar Acara The Gathering of Heroes</h3>
+                <h3 class="heading">Perubahan Jadwal Kunjungan Selama Bulan Ramadhan</h3>
                 <div class="post-meta">
                   <span>Humas</span>
                   <span>Desember 20, 2018</span>
@@ -95,9 +95,9 @@
           </div>
 
           <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
-            <a href="blog-single" class="block-5" style="background-color: grey;">
+            <a href="blog-single" class="block-5" style="background-color: navy;">
               <div class="text">
-                <h3 class="heading">Lapas Kelas IIA Pemuda Tangerang Ikut Meriahkan NAPI Craft 2018</h3>
+                <h3 class="heading">Perayaan Hari Kebangkitan Nasional</h3>
                 <div class="post-meta">
                   <span>Humas</span>
                   <span>Desember 20, 2018</span>
@@ -107,9 +107,9 @@
           </div>
 
           <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
-            <a href="blog-single" class="block-5" style="background-color: grey;">
+            <a href="blog-single" class="block-5" style="background-color: navy;">
               <div class="text">
-                <h3 class="heading">Kampus Poltekip dan Poltekim Segera Hadir di Tangerang</h3>
+                <h3 class="heading">Perayaan Hari Sumpah Pemuda</h3>
                 <div class="post-meta">
                   <span>Humas</span>
                   <span>Desember 20, 2018</span>
