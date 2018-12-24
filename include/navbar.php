@@ -1,3 +1,7 @@
+<?php
+    include './admin/include/config.php';
+?>
+
 <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar" data-aos="fade-down" data-aos-delay="500">
     <div class="container">
     <a class="navbar-brand" href="index">LAPAS KELAS 1 TANGERANG</a>

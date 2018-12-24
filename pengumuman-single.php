@@ -42,7 +42,7 @@
     <div class="container">
       <div class="row align-items-center ftco-vh-75">
         <div class="col-md-7">
-          <h1 class="ftco-heading mb-3" data-aos="fade-up" data-aos-delay="500">Artikel</h1>
+          <h1 class="ftco-heading mb-3" data-aos="fade-up" data-aos-delay="500">Pengumuman</h1>
           <h2 class="h5 ftco-subheading mb-5" data-aos="fade-up"  data-aos-delay="600"><i>"<?php echo $rr['judul_artikel']; ?>"</i></h2>    
         </div>
       </div>

@@ -71,14 +71,14 @@
                             <div class="form-group">
                                 <label for="inputNohp" class="col-sm-2 control-label">No Handphone</label>
                                 <div class="col-sm-10">
-                                    <input type="text" class="form-control" id="inputNohp" name="no_ktp" placeholder="No Handphone" required>
+                                    <input type="text" class="form-control" id="inputNohp" name="no_handphone" placeholder="No Handphone" required>
                                 </div>
                             </div>
 
                             <div class="form-group">
                                 <label for="inputEmail" class="col-sm-2 control-label">Email</label>
                                 <div class="col-sm-10">
-                                    <input type="email" class="form-control" id="inputEmail" name="no_ktp" placeholder="Email" required>
+                                    <input type="email" class="form-control" id="inputEmail" name="email" placeholder="Email" required>
                                 </div>
                             </div>
 
@@ -134,15 +134,18 @@
                                 <label for="inputHubungan" class="col-sm-2 control-label">Hubungan</label>
                                 <div class="col-sm-10">
                                     <select class="form-control" id="inputHubungan" name="hubungan" required>
-                                        <option disabled selected>Pilih Hubungan</option>
-                                        <?php
-                                            $r = $con->query("SELECT * FROM hubungan");
-                                            foreach ($r as $rr) {
-                                        ?>
-                                            <option value="<?php echo $rr['id_hubungan'];?>"><?php echo $rr['hubungan'];?></option>
-                                        <?php
-                                            }
-                                        ?>
+                                        <option value="" disabled selected>Pilih Hubungan</option>
+                                        <option value="Ayah">Ayah</option>
+                                        <option value="Ibu">Ibu</option>
+                                        <option value="Kakak">Kakak</option>
+                                        <option value="Ibu">Adik</option>
+                                        <option value="Ayah">Kakek</option>
+                                        <option value="Ibu">Nenek</option>
+                                        <option value="Ayah">Paman</option>
+                                        <option value="Ibu">Bibi</option>
+                                        <option value="Sepupu">Sepupu</option>
+                                        <option value="Keponakan">Keponakan</option>
+                                        <option value="Kerabat">Kerabat</option>
                                     </select>
                                 </div>
                             </div>
@@ -165,56 +168,71 @@
                             </div>
 
                             <div class="form-group">
-                                <label for="inputBarang" class="col-sm-2 control-label">Barang Bawaan</label>
-                                <div class="col-sm-8">
-                                    <input type="text" class="form-control" id="inputBarang" name="barang" placeholder="Barang Bawaan" required>
+                                <label for="inputBarang1" class="col-sm-2 control-label">Barang Bawaan 1</label>
+                                <div class="col-sm-9">
+                                    <select class="form-control" id="inputBarang1" name="barang1" required>
+                                        <option disabled selected>Pilih Barang 1</option>
+                                        <?php
+                                            $r = $con->query("SELECT * FROM barang");
+                                            foreach ($r as $rr) {
+                                        ?>
+                                            <option value="<?php echo $rr['id_barang'];?>"><?php echo $rr['barang'];?></option>
+                                        <?php
+                                            }
+                                        ?>
+                                    </select>
                                 </div>
                                 <div class="col-sm-1">
-                                    <input type="number" class="form-control" id="inputJmlbarang" name="jml_barang" placeholder="Jumlah Barang Bawaan" required>
-                                </div>
-                                <div class="col-sm-1 text-right">
-                                    <a class="btn btn-default"><i class="glyphicon glyphicon-plus"></i></a>
-                                </div>
-                            </div>
-
-                             <div class="form-group">
-                                <label for="" class="col-sm-2 control-label">List Barang</label>
-                                <div class="col-sm-10">
-                                    <table class="table">
-                                        <thead>
-                                            <tr>
-                                                <th>Nama Barang</th>
-                                                <th>Jumlah</th>
-                                                <th class="text-right">Aksi</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td>Meja</td>
-                                                <td>2</td>
-                                                <td class="text-right"><a class="btn btn-default"><i class="glyphicon glyphicon-trash"></i></a></td>
-                                            </tr>
-                                            <tr>
-                                                <td>Kursi</td>
-                                                <td>3</td>
-                                                <td class="text-right"><a class="btn btn-default"><i class="glyphicon glyphicon-trash"></i></a></td>
-                                            </tr>
-                                            <tr>
-                                                <td>Pakaian</td>
-                                                <td>8</td>
-                                                <td class="text-right"><a class="btn btn-default"><i class="glyphicon glyphicon-trash"></i></a></td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
+                                    <input type="number" class="form-control" id="inputJmlbarang1" name="jml_barang1" placeholder="Jumlah Barang Bawaan1" required>
                                 </div>
                             </div>
 
                             <div class="form-group">
-                                <label class="col-md-2 control-label">Foto KTP Pengunjung</label>
+                                <label for="inputBarang2" class="col-sm-2 control-label">Barang Bawaan 2</label>
+                                <div class="col-sm-9">
+                                    <select class="form-control" id="inputBarang2" name="barang2" required>
+                                        <option disabled selected>Pilih Barang 2</option>
+                                        <?php
+                                            $r = $con->query("SELECT * FROM barang");
+                                            foreach ($r as $rr) {
+                                        ?>
+                                            <option value="<?php echo $rr['id_barang'];?>"><?php echo $rr['barang'];?></option>
+                                        <?php
+                                            }
+                                        ?>
+                                    </select>
+                                </div>
+                                <div class="col-sm-1">
+                                    <input type="number" class="form-control" id="inputJmlbarang2" name="jml_barang2" placeholder="Jumlah Barang Bawaan 2" required>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="inputBarang3" class="col-sm-2 control-label">Barang Bawaan 3</label>
+                                <div class="col-sm-9">
+                                    <select class="form-control" id="inputBarang3" name="barang3" required>
+                                        <option disabled selected>Pilih Barang 3</option>
+                                        <?php
+                                            $r = $con->query("SELECT * FROM barang");
+                                            foreach ($r as $rr) {
+                                        ?>
+                                            <option value="<?php echo $rr['id_barang'];?>"><?php echo $rr['barang'];?></option>
+                                        <?php
+                                            }
+                                        ?>
+                                    </select>
+                                </div>
+                                <div class="col-sm-1">
+                                    <input type="number" class="form-control" id="inputJmlbarang3" name="jml_barang3" placeholder="Jumlah Barang Bawaan 3" required>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="col-md-2 control-label">Foto Pengunjung</label>
                                 <div class="col-md-10">
                                     <input type="file" class="btn btn-default" id="inputFoto">
                                     <p class="help-block">
-                                        max size 1mb.
+                                        photo harus terlihat wajahnya dan ukuran maksimal 1mb.
                                     </p>
                                 </div>
                             </div>

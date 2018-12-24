@@ -2,7 +2,8 @@
 	$id_artikel = $_GET['id_artikel'];
 	$r = $con->query("SELECT * FROM artikel WHERE id_artikel = '$id_artikel'");
 	foreach ($r as $rr) {
-        $id_artikel = $rr['id_artikel']
+        $id_artikel = $rr['id_artikel'];
+        $judul_artikel = $rr['judul_artikel'];
 ?>
 
 <div class="row">
@@ -14,9 +15,9 @@
             <div class="panel-body">
                 <form action="controller/act-artikel-edit.php?id_artikel=<?php echo $id_artikel; ?>" method="POST" class="form-horizontal" role="form">
                     <div class="form-group">
-                        <label for="inputJudulArtikel" class="col-sm-2 control-label">Judul Artikel</label>
+                        <label for="inputJudulArtikel" class="col-sm-2 control-label">Judul</label>
                         <div class="col-sm-10">
-                            <input type="text" class="form-control" id="inputJudulArtikel" value="<?php echo $rr['judul_artikel'];?>" name="judul_artikel" placeholder="Judul Artikel">
+                            <input type="text" class="form-control" id="inputJudulArtikel" value='<?php echo $judul_artikel;?>' name="judul_artikel" placeholder="Judul Artikel">
                         </div>
                     </div>
 

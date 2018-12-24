@@ -45,29 +45,25 @@
     <section class="ftco-section">
       <div class="container">
           <div class="col-md-12" data-aos="fade-up">
-            <span style="text-align: justify; display:block; font-weight: bold;" class="ftco-heading heading-thin mb-3">REGULASI</span>
+            <?php
+              $r = $con->query("SELECT * FROM tipe_file");
+              while ($rr = $r->fetch_array()) {
+                $id_tipe_file = $rr['id_tipe_file'];
+            ?>
+            <span style="text-align: justify; display:block; font-weight: bold;" class="ftco-heading heading-thin mb-3"><?php echo $rr['tipe_file'];?></span>
             <ol class="mb-5">
-              <li><a href="#">Peraturan Pemerintah Tentang Disiplin Pegawai</a> (Hit: 100)</li>
-              <li><a href="#">Surat Edaran Nomor PAS-30.PK.01.04.01 Tahun 2013 tentang Tindak Lanjut Hasil Penggeledahan Barang.Barang Terlarang Di Lapas, Rutan dan Cabang Rutan</a> (Hit: 100)</li>
-              <li><a href="#">Peraturan Menteri Nomor 6 Tahun 2013 tentang Tata Tertib Lembaga Pemasyarakatan dan Rumah Tahanan Negara</a> (Hit: 100)</li>
+              <?php
+                $s = $con->query("SELECT * FROM `file` WHERE id_tipe_file='$id_tipe_file'");
+                while ($ss = $s->fetch_array()) {
+              ?>
+              <li><a target="_blank" href="admin/<?php echo $ss['link_file'];?>"><?php echo $ss['judul_file'];?></a> (Hit: <?php echo $ss['download_hit'];?>)</li>
+              <?php
+                }
+              ?>
             </ol>
-            <span style="text-align: justify; display:block; font-weight: bold;" class="ftco-heading heading-thin mb-3">Formulir Kunjungan</span>
-            <ol class="mb-5">
-              <li><a href="#">FORMULIR KUNJUNGAN</a> (Hit: 100)</li>
-              <li><a href="#">Formulir LHKPN Model KPK B</a> (Hit: 100)</li>
-              <li><a href="#">Formulir LHKPN Model KPK A</a> (Hit: 100)</li>
-            </ol>
-            <span style="text-align: justify; display:block; font-weight: bold;" class="ftco-heading heading-thin mb-3">STANDAR OPERASI</span>
-            <ol class="mb-5">
-              <li><a href="#">Proses Perekrutan Tenaga Kerja Narapidana</a> (Hit: 100)</li>
-              <li><a href="#">Proses Pembuatan Surat Rawat Jalan Napi Diluar Lapas</a> (Hit: 100)</li>
-              <li><a href="#">Proses Pengeluaran Narapidana Untuk Kegiatan Kerja</a> (Hit: 100)</li>
-            </ol>
-            <span style="text-align: justify; display:block; font-weight: bold;" class="ftco-heading heading-thin mb-3">LAIN-LAIN</span>
-            <ol class="mb-5">
-              <li><a href="#">Petunjuk Pengisian Laporan Harta Kekayaan Penyelenggara Negara Model KPK B</a> (Hit: 100)</li>
-              <li><a href="#">Petunjuk Pengisian Laporan Harta Kekayaan Penyelenggara Negara Model KPK A</a> (Hit: 100)</li>
-            </ol>
+            <?php
+              }
+            ?>
           </div>
       </div>
     </section>

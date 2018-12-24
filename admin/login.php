@@ -37,6 +37,7 @@
 								<input class="form-control" type="password" placeholder="Password" name="password" value="12345" required>
 								<?php  isset($_SESSION['error']) ? $e=$_SESSION['error'] : $e=""; echo $e; session_destroy();?>
 								<button type="submit" class="btn btn-primary signup">Login</button>
+								<a href="../" class="btn btn-danger signup">Kembali</a>
 							</form>   
 			            </div>
 			        </div>

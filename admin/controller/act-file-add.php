@@ -21,27 +21,22 @@ $id_tipe_file = $_POST['id_tipe_file'];
 $username = $_SESSION['username'];
 $tgl_terbit = date("Y-m-d H:i:s");
 
-$ekstensi_diperbolehkan	= array('pdf','doc','docx','xls','xlsx','ppt','pptx');
 $file = $_FILES['files']['name'];
 $x = explode('.', $file);
 $ekstensi = strtolower(end($x));
 $ukuran	= $_FILES['files']['size'];
 $file_tmp = $_FILES['files']['tmp_name'];
 
-if(in_array($ekstensi, $ekstensi_diperbolehkan) === true){
-	if($ukuran < 1044070){			
-		move_uploaded_file($file_tmp, '../assets/file/'.$file);
-		$con->query("INSERT INTO file VALUES ('$id_file', '$judul_file', '$id_tipe_file', 'assets/file/$file', '$username', '$tgl_terbit', '0')");
+if($ukuran < 1044070){			
+	move_uploaded_file($file_tmp, '../assets/file/'.$file);
+	$con->query("INSERT INTO file VALUES ('$id_file', '$judul_file', '$id_tipe_file', 'assets/file/$file', '$username', '$tgl_terbit', '0')");
 
-		if ($con->affected_rows > 0){
-			echo "<script>alert('File telah berhasil disimpan');window.location='../index.php?page=file'</script>";
-		}else{
-			echo "<script>alert('File telah gagal disimpan');window.location='../index.php?page=file'</script>";
-		}
-
+	if ($con->affected_rows > 0){
+		echo "<script>alert('File telah berhasil disimpan');window.location='../index.php?page=file'</script>";
 	}else{
-		echo "<script>alert('Ukuran file terlalu besar');window.location='../index.php?page=file'</script>";
+		echo "<script>alert('File telah gagal disimpan');window.location='../index.php?page=file'</script>";
 	}
+
 }else{
-	echo "<script>alert('Ekstensi file tidak diperbolehkan');window.location='../index.php?page=file'</script>";
+	echo "<script>alert('Ukuran file terlalu besar');window.location='../index.php?page=file'</script>";
 }

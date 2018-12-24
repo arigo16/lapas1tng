@@ -70,39 +70,24 @@
         </div>
 
         <div class="row">
+        <?php
+            $r = $con->query("SELECT artikel.id_artikel, artikel.judul_artikel, artikel.id_kategori_artikel, kategori_artikel.kategori_artikel, artikel.artikel, artikel.username, artikel.tgl_terbit, artikel.views FROM kategori_artikel INNER JOIN artikel ON kategori_artikel.id_kategori_artikel = artikel.id_kategori_artikel WHERE kategori_artikel.kategori_artikel<>'Pengumuman' ORDER BY artikel.id_artikel DESC LIMIT 3");
+            while ($rr = $r->fetch_array()) {
+        ?>
           <div class="col-md-6 col-lg-4" data-aos="fade-up">
-            <a href="blog-single" class="block-5" style="background-color: grey;">
+            <a href="blog-single?id_artikel=<?php echo $rr['id_artikel'];?>" class="block-5" style="background-color: grey;">
               <div class="text">
-                <h3 class="heading">Lapas Pemuda Tangerang Terbaik ke-3 Se-Banten dalam Penyerapan Anggaran 2018</h3>
+                <h3 class="heading"><?php echo $rr['judul_artikel'];?></h3>
                 <div class="post-meta">
-                  <span>Humas</span>
-                  <span>Desember 20, 2018</span>
+                  <span><?php echo $rr['username'];?></span>
+                  <span><?php echo $rr['tgl_terbit'];?></span>
                 </div>
               </div>
             </a>
           </div>
-          <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
-            <a href="blog-single" class="block-5" style="background-color: grey;">
-              <div class="text">
-                <h3 class="heading">Akreditasi Paket B di Lapas Pemuda Tangerang</h3>
-                <div class="post-meta">
-                  <span>Humas</span>
-                  <span>Desember 20, 2018</span>
-                </div>
-              </div>
-            </a>
-          </div>
-          <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
-            <a href="blog-single" class="block-5" style="background-color: grey;">
-              <div class="text">
-                <h3 class="heading">Direktur Jenderal Pemasyarakatan Resmikan Barbershop JAPE Style di Lapas Pemuda Tangerang</h3>
-                <div class="post-meta">
-                  <span>Humas</span>
-                  <span>Desember 20, 2018</span>
-                </div>
-              </div>
-            </a>
-          </div>
+          <?php
+              }
+          ?>
         </div>
 
       </div>
