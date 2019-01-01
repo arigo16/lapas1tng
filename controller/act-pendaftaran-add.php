@@ -117,9 +117,8 @@ if ($r -> num_rows > 0){
             
             if ($con->affected_rows > 0){
                 echo "<script>
-                    window.open('../pendaftaran-sukses?id=$id_kunjungan_online', '_blank');
                     alert('Pendaftaran berhasil dilakukan');
-                    window.location='../';
+                    window.location='../pendaftaran-sukses?id=$id_kunjungan_online';
                 </script>";
             }else{
                 echo "<script>alert('Pendaftaran gagal dilakukan');window.location='../pendaftaran'</script>";
