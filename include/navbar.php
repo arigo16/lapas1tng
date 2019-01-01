@@ -11,11 +11,11 @@
 
     <div class="collapse navbar-collapse" id="ftco-nav">
         <ul class="navbar-nav ml-auto">
-        <li class="nav-item"><a href="index" class="nav-link">Home</a></li>
-        <li class="nav-item"><a href="article" class="nav-link">Artikel</a></li>
-        <li class="nav-item"><a href="download-file" class="nav-link">Download File</a></li>
-        <li class="nav-item"><a href="pendaftaran" class="nav-link">Pendaftaran Kunjungan</a></li>
-        <li class="nav-item"><a href="pengumuman" class="nav-link">Pengumuman</a></li>
+            <li class="nav-item"><a href="index" class="nav-link">Home</a></li>
+            <li class="nav-item"><a href="article" class="nav-link">Artikel</a></li>
+            <li class="nav-item"><a href="download-file" class="nav-link">Download File</a></li>
+            <li class="nav-item"><a href="pendaftaran" class="nav-link">Pendaftaran Kunjungan</a></li>
+            <li class="nav-item"><a href="pengumuman" class="nav-link">Pengumuman</a></li>
         </ul>
     </div>
     </div>

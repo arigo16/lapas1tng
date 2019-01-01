@@ -37,7 +37,7 @@
           <div class="col-md-7">
             <h1 class="ftco-heading mb-3" data-aos="fade-up" data-aos-delay="500">LAPAS KELAS 1 TANGERANG</h1>
             <h2 class="h5 ftco-subheading mb-5" data-aos="fade-up"  data-aos-delay="600">Jl. Veteran No. 2, RT. 04 / RW. 04, Babakan, Kec. Tangerang, Kota Tangerang, Banten 15118.</h2>
-            <p data-aos="fade-up"  data-aos-delay="700"><a href="https://www.google.co.id/maps/place/SMKS+Mandiri/@-6.2860474,106.5467925,15z/data=!4m5!3m4!1s0x0:0x1c19f6c5bcd00c4e!8m2!3d-6.2860474!4d106.5467925" class="btn btn-outline-white px-4 py-3" data-toggle="modal" data-target="#reservationModal">Temukan Kami</a></p>
+            <p data-aos="fade-up"  data-aos-delay="700"><a href="https://www.google.co.id/maps/place/SMKS+Mandiri/@-6.2860474,106.5467925,15z/data=!4m5!3m4!1s0x0:0x1c19f6c5bcd00c4e!8m2!3d-6.2860474!4d106.5467925" class="btn btn-outline-white px-4 py-3" target="_blank">Temukan Kami</a></p>
           </div>
         </div>
       </div>
@@ -79,7 +79,7 @@
               <div class="text">
                 <h3 class="heading"><?php echo $rr['judul_artikel'];?></h3>
                 <div class="post-meta">
-                  <span><?php echo $rr['username'];?></span>
+                  <span><?php echo $rr['views'];?> Views</span>
                   <span><?php echo $rr['tgl_terbit'];?></span>
                 </div>
               </div>

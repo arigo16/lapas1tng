@@ -23,7 +23,7 @@
                 <li><a href="https://simpeg.kemenkumham.go.id/SIAP/" class="py-2 d-block">Pernakes</a></li>
                 <li><a href="https://simpeg.kemenkumham.go.id/SIAP/" class="py-2 d-block">Sistem Kepegawaian</a></li>
                 <li><a href="https://digilib.kemenkumham.go.id/" class="py-2 d-block">Perpustakaan</a></li>
-                <li><a href="https://ppid.kemenkumham.go.id/" class="py-2 d-block">Pejabat Pengelola Informasi</a></li>
+                <li><a href="http://smslap.ditjenpas.go.id/public/grl/detail/monthly/upt/db5ba880-6bd1-1bd1-b8e0-313134333039" class="py-2 d-block">Database Pemasyarakatan</a></li>
                 </ul>
             </div>
             </div>

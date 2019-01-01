@@ -36,6 +36,7 @@
     $r = $con->query("SELECT * FROM artikel WHERE id_artikel = '$id_artikel'");
     foreach ($r as $rr) {
           $id_artikel = $rr['id_artikel'];
+          $views = $rr['views'];
   ?>
 
   <section class="ftco-cover" style="background-image: url(assets/images/bg_1.jpg);" id="section-home" data-aos="fade"  data-stellar-background-ratio="0.5">
@@ -62,6 +63,8 @@
   
   <?php
     }
+    $views_update = $views + 1;
+    $con->query("UPDATE artikel SET views='$views_update' WHERE id_artikel='$id_artikel'");
   ?>
 
   <?php

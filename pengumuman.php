@@ -62,7 +62,7 @@
               <div class="text">
                 <h3 class="heading"><?php echo $rr['judul_artikel'];?></h3>
                 <div class="post-meta">
-                  <span><?php echo $rr['username'];?></span>
+                  <span><?php echo $rr['views'];?> Views</span>
                   <span><?php echo $rr['tgl_terbit'];?></span>
                 </div>
               </div>

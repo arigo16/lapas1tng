@@ -36,7 +36,7 @@
         <div class="row align-items-center ftco-vh-75">
           <div class="col-md-7">
             <h1 class="ftco-heading mb-3" data-aos="fade-up" data-aos-delay="500">Download File</h1>
-            <h2 class="h5 ftco-subheading mb-5" data-aos="fade-up"  data-aos-delay="600"><i>"File yang dapat di download dari Lapas Kelas 1 Tangerang"</i></h2>    
+            <h2 class="h5 ftco-subheading mb-5" data-aos="fade-up" data-aos-delay="600"><i>"File yang dapat di download dari Lapas Kelas 1 Tangerang"</i></h2>    
           </div>
         </div>
       </div>
@@ -56,7 +56,7 @@
                 $s = $con->query("SELECT * FROM `file` WHERE id_tipe_file='$id_tipe_file'");
                 while ($ss = $s->fetch_array()) {
               ?>
-              <li><a target="_blank" href="admin/<?php echo $ss['link_file'];?>"><?php echo $ss['judul_file'];?></a> (Hit: <?php echo $ss['download_hit'];?>)</li>
+              <li><a target="_blank" href="file?link=<?php echo $ss['link_file'];?>&id=<?php echo $ss['id_file'];?>"><?php echo $ss['judul_file'];?></a> (Hit: <?php echo $ss['download_hit'];?>)</li>
               <?php
                 }
               ?>
