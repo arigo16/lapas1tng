@@ -92,39 +92,52 @@ if ($r -> num_rows > 0){
 	}
 	
 	if($total_pengikut <= 5){
-        $ekstensi_diperbolehkan	= array('png','jpg','jpeg');
-        $photo = $_FILES['foto']['name'];
-        $x = explode('.', $photo);
-        $ekstensi = strtolower(end($x));
-        $file_tmp = $_FILES['foto']['tmp_name'];
 
-        if(in_array($ekstensi, $ekstensi_diperbolehkan) === true){
-            move_uploaded_file($file_tmp, '../admin/assets/images/foto/'.$photo);
-            rename('../admin/assets/images/foto/'.$photo, '../admin/assets/images/foto/'.$id_kunjungan_online.'.'.$ekstensi);
-            $con->query("INSERT INTO kunjungan_online VALUES ('$id_kunjungan_online', '$nama', '$no_ktp', '$no_handphone', '$email', '$jenis_kelamin', '$alamat', '$tgl_kunjungan_fix', '$id_napi', '$hubungan', '$pengikut_pria', '$pengikut_wanita', '$pengikut_anak', '$id_kunjungan_online', '$id_kunjungan_online.$ekstensi')");
+        $validate_time = substr($waktu_kunjungan, 0, 2);
+        if ($validate_time == '08' || $validate_time == '09' || $validate_time == '10' || $validate_time == '11'){
 
-            if($barang1 != '' && $jml_barang1 != ''){
-                $con->query("INSERT INTO barang_bawaan VALUES (NULL, '$id_kunjungan_online', '$barang1', '$jml_barang1')");
-            }
+            $validate_tgl = date('N', strtotime($tgl_kunjungan));
+            if($validate_tgl == 0 || $validate_tgl == 5){
+                $ekstensi_diperbolehkan	= array('png','jpg','jpeg');
+                $photo = $_FILES['foto']['name'];
+                $x = explode('.', $photo);
+                $ekstensi = strtolower(end($x));
+                $file_tmp = $_FILES['foto']['tmp_name'];
 
-            if($barang2 != '' && $jml_barang2 != ''){
-                $con->query("INSERT INTO barang_bawaan VALUES (NULL, '$id_kunjungan_online', '$barang2', '$jml_barang2')");
-            }
+                if(in_array($ekstensi, $ekstensi_diperbolehkan) === true){
+                    move_uploaded_file($file_tmp, '../admin/assets/images/foto/'.$photo);
+                    rename('../admin/assets/images/foto/'.$photo, '../admin/assets/images/foto/'.$id_kunjungan_online.'.'.$ekstensi);
+                    $con->query("INSERT INTO kunjungan_online VALUES ('$id_kunjungan_online', '$nama', '$no_ktp', '$no_handphone', '$email', '$jenis_kelamin', '$alamat', '$tgl_kunjungan_fix', '$id_napi', '$hubungan', '$pengikut_pria', '$pengikut_wanita', '$pengikut_anak', '$id_kunjungan_online', '$id_kunjungan_online.$ekstensi')");
 
-            if($barang3 != '' && $jml_barang3 != ''){
-                $con->query("INSERT INTO barang_bawaan VALUES (NULL, '$id_kunjungan_online', '$barang3', '$jml_barang3')");
-            }
-            
-            if ($con->affected_rows > 0){
-                echo "<script>
-                    alert('Pendaftaran berhasil dilakukan');
-                    window.location='../pendaftaran-sukses?id=$id_kunjungan_online';
-                </script>";
+                    if($barang1 != '' && $jml_barang1 != ''){
+                        $con->query("INSERT INTO barang_bawaan VALUES (NULL, '$id_kunjungan_online', '$barang1', '$jml_barang1')");
+                    }
+
+                    if($barang2 != '' && $jml_barang2 != ''){
+                        $con->query("INSERT INTO barang_bawaan VALUES (NULL, '$id_kunjungan_online', '$barang2', '$jml_barang2')");
+                    }
+
+                    if($barang3 != '' && $jml_barang3 != ''){
+                        $con->query("INSERT INTO barang_bawaan VALUES (NULL, '$id_kunjungan_online', '$barang3', '$jml_barang3')");
+                    }
+                    
+                    if ($con->affected_rows > 0){
+                        echo "<script>
+                            alert('Pendaftaran berhasil dilakukan');
+                            window.location='../pendaftaran-sukses?id=$id_kunjungan_online';
+                        </script>";
+                    }else{
+                        echo "<script>alert('Pendaftaran gagal dilakukan');window.location='../pendaftaran'</script>";
+                    }
+                }else{
+                    echo "<script>alert('File bukan format photo');window.history.back()</script>";
+                }
             }else{
-                echo "<script>alert('Pendaftaran gagal dilakukan');window.location='../pendaftaran'</script>";
+                echo "<script>alert('Hari Jumat dan Minggu, kunjungan libur');window.history.back()</script>";
             }
+
         }else{
-            echo "<script>alert('File bukan format photo');window.history.back()</script>";
+            echo "<script>alert('Waktu kunjungan 08:00 - 11:59');window.history.back()</script>";
         }
 
 	}else{

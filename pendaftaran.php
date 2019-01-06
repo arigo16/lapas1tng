@@ -38,7 +38,7 @@
                     <nav class="collapse navbar-collapse bs-navbar-collapse navbar-right" role="navigation">
                     <ul class="nav navbar-nav">
                         <li class="dropdown">
-                        <a href="../" class="dropdown-toggle">Kembali</a>
+                        <a href="./" class="dropdown-toggle">Kembali</a>
                         </li>
                     </ul>
                     </nav>
