@@ -79,6 +79,34 @@
     <script src="assets/js/forms.js"></script>
     <script src="assets/js/tables.js"></script>
     <script src="assets/js/editors.js"></script>
+
+    <!-- Javascript -->
+    <script type="text/javascript">
+
+    // Autoview
+    function isi_otomatis_kasus(){
+        var nama_napi = $("#nama_napi").val();
+        $.ajax({
+            url: 'controller/act-autoview-kasus.php',
+            data:"nama_napi="+nama_napi ,
+        }).success(function (data) {
+            var json = data,
+            obj = JSON.parse(json);
+            $('#kasus').val(obj.kasus);
+        });
+    }
+
+    // Inputan hanya angka
+    function OnlyNumber(evt) {
+        var charCode = (evt.which) ? evt.which : event.keyCode
+            if (charCode > 31 && (charCode < 48 || charCode > 57))
+
+            return false;
+        return true;
+    }
+
+    </script>
+    
   </body>
 </html>
 

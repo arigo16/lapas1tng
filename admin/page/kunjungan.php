@@ -4,7 +4,7 @@
             <div class="panel-heading">
                 <div class="panel-title">Data Persetujuan Kunjungan</div>
                 <div class="panel-options">
-                    <a href="index.php?page=kasus-add" data-rel="reload"><i class="glyphicon glyphicon-plus"></i></a>
+                    <a href="index.php?page=kunjungan-add" data-rel="reload"><i class="glyphicon glyphicon-plus"></i></a>
                 </div>
             </div>
             <div class="panel-body">

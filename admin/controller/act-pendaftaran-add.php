@@ -1,6 +1,7 @@
 <?php
 date_default_timezone_set("Asia/Jakarta");
-include ('../admin/include/config.php');
+session_start();
+include ('../include/config.php');
 
 function assign_rand_value($num) {
     switch($num) {
@@ -56,11 +57,14 @@ function get_rand_alphanumeric($length) {
     return $rand_id;
 }
 
+$date = date("Y-m-d H:i:s");
 $year = date("y");
 $month = date("m");
 $day = date("d");
 $code1 = get_rand_alphanumeric(2);
 $code2 = get_rand_alphanumeric(2);
+
+$username = $_SESSION['username'];
 
 $id_kunjungan_online = $year . $code1 . $month . $code2 . $day;
 $nama = $_POST['nama'];
@@ -108,8 +112,8 @@ if ($r -> num_rows > 0){
                 $file_tmp = $_FILES['foto']['tmp_name'];
 
                 if(in_array($ekstensi, $ekstensi_diperbolehkan) === true){
-                    move_uploaded_file($file_tmp, '../admin/assets/images/foto/'.$photo);
-                    rename('../admin/assets/images/foto/'.$photo, '../admin/assets/images/foto/'.$id_kunjungan_online.'.'.$ekstensi);
+                    move_uploaded_file($file_tmp, '../assets/images/foto/'.$photo);
+                    rename('../assets/images/foto/'.$photo, '../assets/images/foto/'.$id_kunjungan_online.'.'.$ekstensi);
                     $con->query("INSERT INTO kunjungan_online VALUES ('$id_kunjungan_online', '$nama', '$no_ktp', '$no_handphone', '$email', '$jenis_kelamin', '$alamat', '$tgl_kunjungan_fix', '$id_napi', '$hubungan', '$pengikut_pria', '$pengikut_wanita', '$pengikut_anak', '$id_kunjungan_online', '$id_kunjungan_online.$ekstensi')");
 
                     if($barang1 != '' && $jml_barang1 != ''){
@@ -124,11 +128,10 @@ if ($r -> num_rows > 0){
                         $con->query("INSERT INTO barang_bawaan VALUES (NULL, '$id_kunjungan_online', '$barang3', '$jml_barang3')");
                     }
                     
+                    $con->query("INSERT INTO persetujuan_kunjungan_online VALUES (NULL, '$id_kunjungan_online', '$date', '$username')");
+
                     if ($con->affected_rows > 0){
-                        echo "<script>
-                            alert('Pendaftaran berhasil dilakukan');
-                            window.location='../pendaftaran-sukses?id=$id_kunjungan_online';
-                        </script>";
+                        echo "<script>alert('Pendaftaran Kunjungan telah berhasil disimpan');window.location='../index.php?page=kunjungan'</script>";
                     }else{
                         echo "<script>alert('Pendaftaran gagal dilakukan');window.history.back()</script>";
                     }

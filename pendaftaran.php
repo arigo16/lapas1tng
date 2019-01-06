@@ -104,9 +104,11 @@
                                 <label for="inputtglkunjungan" class="col-sm-2 control-label">Tanggal Kunjungan</label>
                                 <div class="col-sm-8">
                                     <input type="date" class="form-control" id="inputtglkunjungan" name="tgl_kunjungan" placeholder="Tanggal Kunjungan*" required>
+                                    <p class="note"><strong>Note:</strong> Hari Minggu dan Jumat libur.</p>
                                 </div>
                                 <div class="col-sm-2">
                                     <input type="time" class="form-control" id="inputwaktukunjungan" name="waktu_kunjungan" placeholder="Waktu Kunjungan*" required>
+                                    <p class="note"><strong>Note:</strong> Waktu kunjungan 08:00 - 11:59.</p>
                                 </div>
                             </div>
 
