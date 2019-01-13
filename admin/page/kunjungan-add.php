@@ -93,11 +93,11 @@
                                 <option value="Ayah">Ayah</option>
                                 <option value="Ibu">Ibu</option>
                                 <option value="Kakak">Kakak</option>
-                                <option value="Ibu">Adik</option>
-                                <option value="Ayah">Kakek</option>
-                                <option value="Ibu">Nenek</option>
-                                <option value="Ayah">Paman</option>
-                                <option value="Ibu">Bibi</option>
+                                <option value="Adik">Adik</option>
+                                <option value="Kakek">Kakek</option>
+                                <option value="Nenek">Nenek</option>
+                                <option value="Paman">Paman</option>
+                                <option value="Bibi">Bibi</option>
                                 <option value="Sepupu">Sepupu</option>
                                 <option value="Keponakan">Keponakan</option>
                                 <option value="Kerabat">Kerabat</option>

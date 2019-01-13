@@ -2,7 +2,7 @@
   include 'admin/include/config.php';
 
 	$id_kunjungan_online = $_GET['id'];
-	$r = $con->query("SELECT kunjungan_online.id_kunjungan_online, kunjungan_online.nama, kunjungan_online.no_ktp, kunjungan_online.no_hp, kunjungan_online.email, kunjungan_online.jenis_kelamin, kunjungan_online.alamat, kunjungan_online.tgl_kunjungan, kunjungan_online.id_napi, napi.nama_napi, napi.id_kasus, kasus.kasus, kunjungan_online.hubungan, kunjungan_online.pengikut_laki, kunjungan_online.pengikut_perempuan, kunjungan_online.pengikut_anak, kunjungan_online.id_barang_bawaan, kunjungan_online.foto_pengunjung FROM (kasus INNER JOIN (napi INNER JOIN kunjungan_online ON napi.id_napi = kunjungan_online.id_napi) ON kasus.id_kasus = napi.id_kasus) INNER JOIN (barang INNER JOIN barang_bawaan ON barang.id_barang = barang_bawaan.id_barang) ON kunjungan_online.id_barang_bawaan = barang_bawaan.id_barang_bawaan WHERE kunjungan_online.id_kunjungan_online='$id_kunjungan_online'");
+	$r = $con->query("SELECT kunjungan_online.id_kunjungan_online, kunjungan_online.nama, kunjungan_online.no_ktp, kunjungan_online.no_hp, kunjungan_online.email, kunjungan_online.jenis_kelamin, kunjungan_online.alamat, kunjungan_online.tgl_kunjungan, kunjungan_online.id_napi, napi.nama_napi, napi.id_kasus, kasus.kasus, kunjungan_online.hubungan, kunjungan_online.pengikut_laki, kunjungan_online.pengikut_perempuan, kunjungan_online.pengikut_anak, kunjungan_online.id_barang_bawaan, kunjungan_online.foto_pengunjung FROM kasus INNER JOIN (napi INNER JOIN kunjungan_online ON napi.id_napi = kunjungan_online.id_napi) ON kasus.id_kasus = napi.id_kasus WHERE kunjungan_online.id_kunjungan_online='$id_kunjungan_online'");
 	foreach ($r as $rr) {
     $id_kunjungan_online = $rr['id_kunjungan_online']
 ?>

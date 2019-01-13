@@ -105,6 +105,17 @@
         return true;
     }
 
+    function showBarang() {
+      var checkBox = document.getElementById("checkBarang");
+      var area = document.getElementById("areaBarang");
+
+      if (checkBox.checked == true){
+        area.style.display = "block";
+      } else {
+        area.style.display = "none";
+      }
+    }
+
     </script>
     
   </body>

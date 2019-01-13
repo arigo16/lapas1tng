@@ -114,7 +114,7 @@ if ($r -> num_rows > 0){
                 if(in_array($ekstensi, $ekstensi_diperbolehkan) === true){
                     move_uploaded_file($file_tmp, '../assets/images/foto/'.$photo);
                     rename('../assets/images/foto/'.$photo, '../assets/images/foto/'.$id_kunjungan_online.'.'.$ekstensi);
-                    $con->query("INSERT INTO kunjungan_online VALUES ('$id_kunjungan_online', '$nama', '$no_ktp', '$no_handphone', '$email', '$jenis_kelamin', '$alamat', '$tgl_kunjungan_fix', '$id_napi', '$hubungan', '$pengikut_pria', '$pengikut_wanita', '$pengikut_anak', '$id_kunjungan_online', '$id_kunjungan_online.$ekstensi')");
+                    $con->query("INSERT INTO kunjungan_online VALUES ('$id_kunjungan_online', '$nama', '$no_ktp', '$no_handphone', '$email', '$jenis_kelamin', '$alamat', '$tgl_kunjungan_fix', '$id_napi', '$hubungan', '$pengikut_pria', '$pengikut_wanita', '$pengikut_anak', '$id_kunjungan_online', '$id_kunjungan_online.$ekstensi', '1')");
 
                     if($barang1 != '' && $jml_barang1 != ''){
                         $con->query("INSERT INTO barang_bawaan VALUES (NULL, '$id_kunjungan_online', '$barang1', '$jml_barang1')");
