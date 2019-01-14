@@ -12,6 +12,13 @@
                 <form action="" method="POST" class="form-horizontal" role="form">
                     <legend>Data Diri</legend>
                     <div class="form-group">
+                        <label for="inputNama" class="col-sm-2 control-label">Tanggal Kunjungan</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="inputTglKunjungan" name="tgl_kunjungan" value="<?php echo $rr['tgl_kunjungan'];?>" placeholder="Tanggal Kunjungan" readonly>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
                         <label for="inputNama" class="col-sm-2 control-label">Nama</label>
                         <div class="col-sm-10">
                             <input type="text" class="form-control" id="inputNama" name="nama" value="<?php echo $rr['nama'];?>" placeholder="Nama" readonly>
@@ -125,7 +132,7 @@
                     
                     <div class="form-group">
                         <div class="col-sm-offset-2 col-sm-10">
-                            <a class="btn btn-primary">Cetak</a>
+                            <a href="../admin/page/kunjungan-cetak?id=<?php echo $id_kunjungan_online ?>" target="blank" class="btn btn-primary">Cetak</a>
                             <a class="btn btn-danger" onclick="history.back();">Kembali</a>
                         </div>
                     </div>

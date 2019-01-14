@@ -5,14 +5,14 @@
                 <div class="panel-title">Laporan Data Kunjungan Periode</div>
             </div>
             <div class="panel-body">
-                <form action="controller/act-kasus-add.php" method="POST" class="form-horizontal" role="form">
+                <form action="report/lap-kunjungan" method="POST" class="form-horizontal" role="form">
                     <div class="form-group">
                         <label for="inputTanggalAwal" class="col-sm-2 control-label">Periode</label>
                         <div class="col-sm-5">
-                            <input type="date" class="form-control" id="inputTanggalAwal" name="tgl_awal" placeholder="Tanggal Awal">
+                            <input type="date" class="form-control" id="inputTanggalAwal" name="tgl_awal" placeholder="Tanggal Awal" required>
                         </div>
                         <div class="col-sm-5">
-                            <input type="date" class="form-control" id="inputTanggaAkhir" name="tgl_akhir" placeholder="Tanggal Akhir">
+                            <input type="date" class="form-control" id="inputTanggaAkhir" name="tgl_akhir" placeholder="Tanggal Akhir" required>
                         </div>
                     </div>
                     
@@ -31,21 +31,21 @@
                 <div class="panel-title">Laporan Data Kunjungan Periode Berdasarkan Napi</div>
             </div>
             <div class="panel-body">
-                <form action="controller/act-kasus-add.php" method="POST" class="form-horizontal" role="form">
+                <form action="report/lap-kunjungan-bynapi" method="POST" class="form-horizontal" role="form">
                     <div class="form-group">
                         <label for="inputTanggalAwal" class="col-sm-2 control-label">Periode</label>
                         <div class="col-sm-5">
-                            <input type="date" class="form-control" id="inputTanggalAwal" name="tgl_awal" placeholder="Tanggal Awal">
+                            <input type="date" class="form-control" id="inputTanggalAwal" name="tgl_awal" placeholder="Tanggal Awal" required>
                         </div>
                         <div class="col-sm-5">
-                            <input type="date" class="form-control" id="inputTanggaAkhir" name="tgl_akhir" placeholder="Tanggal Akhir">
+                            <input type="date" class="form-control" id="inputTanggaAkhir" name="tgl_akhir" placeholder="Tanggal Akhir" required>
                         </div>
                     </div>
 
                     <div class="form-group">
                         <label class="col-md-2 control-label" for="text-field">Nama Napi</label>
                         <div class="col-md-5">
-                            <input class="form-control" placeholder="Nama Napi*" name="nama_napi" id="nama_napi" type="text" onkeyup="isi_otomatis_kasus()" onchange="isi_otomatis_kasus()" list="list">
+                            <input class="form-control" placeholder="Nama Napi*" name="nama_napi" id="nama_napi" type="text" onkeyup="isi_otomatis_kasus()" onchange="isi_otomatis_kasus()" list="list" required>
                             <datalist id="list">
                             <?php
                                 $r = $con->query("SELECT * FROM napi");

@@ -6,8 +6,9 @@
 
     $tgl_awal = $_POST['tgl_awal'];
     $tgl_akhir = $_POST['tgl_akhir'];
+    $nama_napi = $_POST['nama_napi'];
 
-    $r = $con->query("SELECT * FROM napi INNER JOIN kunjungan_online ON napi.id_napi = kunjungan_online.id_napi WHERE date(tgl_kunjungan) between DATE('$tgl_awal') AND DATE('$tgl_akhir')");
+    $r = $con->query("SELECT * FROM napi INNER JOIN kunjungan_online ON napi.id_napi = kunjungan_online.id_napi WHERE nama_napi='$nama_napi' AND date(tgl_kunjungan) between DATE('$tgl_awal') AND DATE('$tgl_akhir')");
 
     $html = '<!doctype html>
     <html>
@@ -57,7 +58,7 @@
           <td colspan="6" style="text-align:right; font-weight: bold;">
             Total Pengunjung
           </td>';
-          $result = $con->query("SELECT COUNT(*) FROM napi INNER JOIN kunjungan_online ON napi.id_napi = kunjungan_online.id_napi WHERE date(tgl_kunjungan) between DATE('$tgl_awal') AND DATE('$tgl_akhir')");
+          $result = $con->query("SELECT COUNT(*) FROM napi INNER JOIN kunjungan_online ON napi.id_napi = kunjungan_online.id_napi WHERE nama_napi='$nama_napi' AND date(tgl_kunjungan) between DATE('$tgl_awal') AND DATE('$tgl_akhir')");
           $row = $result->fetch_row();
           $html .='
           <td style="text-align:center; font-weight: bold;">
