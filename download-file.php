@@ -46,7 +46,7 @@
       <div class="container">
           <div class="col-md-12" data-aos="fade-up">
             <?php
-              $r = $con->query("SELECT * FROM tipe_file");
+              $r = $con->query("SELECT * FROM tipe_file WHERE tipe_file <> 'Gambar'");
               while ($rr = $r->fetch_array()) {
                 $id_tipe_file = $rr['id_tipe_file'];
             ?>

@@ -19,11 +19,11 @@
                 </thead>
                 <tbody>
                 <?php
-                    $r = $con->query("SELECT file.id_file, file.judul_file, tipe_file.tipe_file, file.tgl_terbit FROM users INNER JOIN (tipe_file INNER JOIN file ON tipe_file.id_tipe_file = file.id_tipe_file) ON users.username = file.username");
+                    $r = $con->query("SELECT file.id_file, file.link_file, file.judul_file, tipe_file.tipe_file, file.tgl_terbit FROM users INNER JOIN (tipe_file INNER JOIN file ON tipe_file.id_tipe_file = file.id_tipe_file) ON users.username = file.username");
                     while ($rr = $r->fetch_array()) {
                 ?>
                     <tr>
-                        <td><?php echo $rr['judul_file'];?></td>
+                        <td><a href="<?php echo $rr['link_file'];?>" target="blank"><?php echo $rr['judul_file'];?></a></td>
                         <td><?php echo $rr['tipe_file'];?></td>
                         <td><?php echo $rr['tgl_terbit'];?></td>
                         <td class="center"> 
